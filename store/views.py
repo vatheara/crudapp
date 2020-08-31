@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from product.forms import ProductForm
-from product.models import Product
+from store.forms import ProductForm
+from store.models import Product
 from django.http import HttpResponse
 
 def product_create(request):
