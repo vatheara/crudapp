@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+table{
+    width:100%;
+    font-size:18px;
+}
+table, th, td {
+    border: 1px solid purple;
+    border-collapse: collapse;
+}
+    </style>
+    </head>
+    <body>
+        <h1> Product Stocks </h1>
+        <center>
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product QTY</th>
+                    <th>Product Price</th>
+                    <th>Amount</th>
+                </tr>
+    {%for i in p%}
+                <tr>
+                    <td>{{i.p_id}}</td>
+                    <td>{{i.p_name}}</td>
+                    <td>{{i.p_qty}}</td>
+                    <td>{{i.p_price}}</td>
+                    <td>{% widthratio i.p_price 1 i.p_qty %}
+                </tr>
+    {%endfor%}
+            </table>
+        </center>
+    </body>
+</html>
