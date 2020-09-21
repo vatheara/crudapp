@@ -19,6 +19,10 @@ def read(request):
     products = Product.objects.all()
     return render(request,'list.html',{'p':products,})
 
+def Delete(request,id):
+    del_pro = Product.objects.filter(p_id=id)
+    del_pro.delete()
+    return  redirect('/read')
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
