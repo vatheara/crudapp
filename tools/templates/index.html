@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="refresh" content="3" />
+        <title>Facebook Retreive Comments</title>
+
+    </head>
+    <body>
+        total comments:{{count}}
+        <br>
+        ========all-cmt==========
+        <br>
+        {% for c in cmt %}
+        {{c}}<br>
+        {%endfor%}
+
+        =======Winner========<br>
+        {% for c in cmt %}
+            {% if "ABC" in c %}
+            {{c}} won! <br>
+
+            {% endif %}
+        {% endfor %}
+     </body>
+
+</html>

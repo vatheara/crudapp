@@ -18,7 +18,8 @@ from django.urls import path, include
 from store import views
 urlpatterns = [
     path('test',include('testing.urls')),
+    path('tool/',include('tools.urls')),
     path('', include('store.urls')),
-    path('delete/<int:id',views.Delete),
+    path('delete/<int:id>',views.Delete),
     path('admin/', admin.site.urls),
 ]
