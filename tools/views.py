@@ -4,7 +4,7 @@ import requests
 def test(request):
     return HttpResponse("yes it's works!")
 def fb_cmt(request):
-    TOKEN = "EAAEDHsLYgpUBAFpnWiYlQWl0lZBCoy5ZBF099uqIuZBS1oBIXllQlDAZB3xqUsn2TphELRk6DLt4o9GDGbCX98qgJw43e62VAwWWfZAgChgLH5XOqtZBJW9syaoo16Dcq00RmxLje08VPjmSNfGukeYa5nsWduk3Q5ZAKLplqwfrXOAhwUsnoYwCdHObrzStNUgjaj20Bs7QiUiEtPyUmof5acRlZC4UKg0LZCzzuSkZBFoQZDZD"
+    TOKEN = "EAAEDHsLYgpUBAOoOargWFsAFKTmcs3AgvZAE8axX2Qr2ZArCC8HK2yxc2ZBZCqVHFP8p1vKqLZCIAp3aGLKsfcj6TNAWCGCxRMc6wxJbTphOF0ZAHfoaUuLrXmPzyVwY8ieQGPcPr0RV5kwE7nR0VUuGtbH8BfljJqnpkGt2VSxwZDZD"
     r = requests.get("https://graph.facebook.com/v8.0/950349465447726/comments?access_token="+TOKEN)
     cmt_count = len(r.json()['data'])
     all_cmt = []
